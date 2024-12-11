@@ -1,4 +1,4 @@
-import { expect, PlaywrightTestConfig } from '@playwright/test'
+import { PlaywrightTestConfig } from '@playwright/test'
 import { PAGE_HEIGHT, PAGE_WIDTH } from './tests/helpers/constants'
 
 const config: PlaywrightTestConfig = {
@@ -6,6 +6,7 @@ const config: PlaywrightTestConfig = {
     headless: false,
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
     viewport: { width: PAGE_WIDTH, height: PAGE_HEIGHT },
     bypassCSP: true,
     contextOptions: {
@@ -18,7 +19,7 @@ const config: PlaywrightTestConfig = {
         '--disable-web-security',
         '--disable-gpu',
         '--disable-dev-shm-usage',
-        '--disable-http2' // Onemogući HTTP/2
+        '--disable-http2'
       ]
     }
   },

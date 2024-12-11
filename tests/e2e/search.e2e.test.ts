@@ -30,6 +30,7 @@ test.describe('Header search ', () => {
     await searchInput.click()
 
     expect(await searchResultsContainer.isVisible()).toBe(true)
+
     await popularSearches.waitFor()
 
     expect(await popularSearches.isVisible()).toBe(true)
