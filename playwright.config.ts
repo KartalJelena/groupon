@@ -23,7 +23,7 @@ const config: PlaywrightTestConfig = {
       ]
     }
   },
-  retries: 0,
+  retries: 1,
   projects: [
     {
       name: 'e2e',

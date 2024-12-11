@@ -29,6 +29,4 @@ test.describe('Offer banner ', () => {
     await navigationButton.click()
     await expect(banner).toContainText(expectedTexts[2])
   })
-
-
 })
